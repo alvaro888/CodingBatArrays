@@ -6,29 +6,42 @@
 
 /**
  *
- * @author xp
+ * @author ALVARO
+ * 
+ * Dado un array int, devolver true si la matriz contiene 2 dos veces o 3 veces.
+ * La matriz será longitud 0, 1, o 2.
  */
 public class VentanaCodingBat extends javax.swing.JFrame {
 
     /**
+     * 
      * Creates new form VentanaCodingBat
+     * 
      */
     public VentanaCodingBat() {
         initComponents();
     }
     
     public boolean double23(int[] nums) {
-
+// tamaño del array
  if (nums.length == 2){ 
+// calculo la posicion del array con el numero 
+// que quiero que aparezca
+// y devuelvo true si es cierto     
  if (nums[0] == 2 &&  nums[1] == 2){
      jLabel1.setText("true");
  return true;
  }
+// calculo la posicion del array con el numero 
+// que quiero que aparezca
+// y devuelvo true si es cierto   
  else  if (nums[0] == 3 &&  nums[1] == 3){
      jLabel1.setText("true");
  return true;
  }
  }
+ //si no se da el caso anterior 
+ // devuelve false
  jLabel1.setText("false");
  return false;
  
@@ -61,11 +74,6 @@ public class VentanaCodingBat extends javax.swing.JFrame {
                 jButton1MousePressed(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
 
@@ -75,21 +83,11 @@ public class VentanaCodingBat extends javax.swing.JFrame {
                 jButton2MousePressed(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         jButton3.setText("CASO 3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton3MousePressed(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -129,31 +127,25 @@ public class VentanaCodingBat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
-      int array [] = {2, 2};
+     // pulsa el boton1(caso1)
+     // aparecera resultado en el jLabel1   
+        int array [] = {2, 2};
       double23(array);
     }//GEN-LAST:event_jButton1MousePressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+     // pulsa el boton2(caso2)
+     // aparecera resultado en el jLabel1 
         int array [] = {3, 3};
       double23(array);
     }//GEN-LAST:event_jButton2MousePressed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+     // pulsa el boton3(caso3)
+     // aparecera resultado en el jLabel1 
         int array [] = {2, 3};
       double23(array);
     }//GEN-LAST:event_jButton3MousePressed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
